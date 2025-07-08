@@ -10,7 +10,7 @@ const SelectCommentSec = () => {
   const [comment, setComment] = React.useState("")
   useEffect(() => {
     const id = searchParams.get("id");
-    if (id && comment.trim().length > 0) {
+    if (id) {
       updatePost(id, {commentMessage: comment});
     }
   }, [comment]);
